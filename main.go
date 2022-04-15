@@ -36,7 +36,7 @@ func main() {
 	defer cancel()
 
 	// also set up a custom logger
-	ctx, cancel := chromedp.NewContext(allocCtx, chromedp.WithDebugf(log.Printf))
+	ctx, cancel := chromedp.NewContext(allocCtx, chromedp.WithLogf(log.Printf))
 	defer cancel()
 
 	var buf []byte
